@@ -3,7 +3,7 @@ const cors = require('cors')
 const app = express()
 const port = 9090
 app.use(cors())
-app.get('/eom-auth/get-users', (req, res) => {
+app.get('/api/eom-auth/get-users', (req, res) => {
     const data = [
         {
             id:1,
