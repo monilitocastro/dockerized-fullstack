@@ -3,6 +3,12 @@ const cors = require('cors')
 const app = express()
 const port = 9090
 app.use(cors())
+app.get('/api', (req, res) => {
+    res.send("api version 0.0.1")
+})
+app.get('/', (req, res) => {
+    res.send("server version 0.0.1")
+})
 app.get('/api/eom-auth/get-users', (req, res) => {
     const data = [
         {
